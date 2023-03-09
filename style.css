@@ -10,12 +10,20 @@ body {
     width: 100vw;
     height: 30 rem;
     --player-button-width: 3em;
+    --sound-button-width: 2em;
+    --space: .5em;  
+    --tw-bg-opacity: 1;
+    --acc-background: rgb(239 239 239/var(--tw-bg-opacity));
+    --acc-background: #d9d9d9;
+    --acc-button: rgb(255 255 255/var(--tw-bg-opacity));
+    --acc-black: rgb(0 0 0/var(--tw-bg-opacity));
 }
 
 .icon-container {
     width: 100%;
     height: 100%;
     background-color: #000000;
+    background-color: var(--acc-black);
     color: #fff;
     display: flex;
     justify-content: center;
@@ -42,6 +50,7 @@ body {
     height: var(--player-button-width);
     cursor: pointer;
     padding: 0;
+    box-shadow: 0 0 20px 2px #00000040;
 }
 
 
@@ -49,10 +58,10 @@ body {
     -webkit-appearance: none;
     width: calc(100% - (var(--player-button-width) + var(--sound-button-width) + var(--space)));
     height: .5em;
-    background-color: #e5e5e5;
+    background-color: var(--acc-background);
     border-radius: 5px;
     background-size: 0% 100%;
-    background-image: linear-gradient(#7b7678, #c4bfc2);
+    background-image: linear-gradient(#00000080, var(--acc-background));
     background-repeat: no-repeat;
     margin-right: var(--space);
     width: 100vw;
@@ -66,7 +75,7 @@ body {
     cursor: pointer;
     opacity: 0;
     transition: all .1s;
-    background-color: #a94672;
+    background-color: var(--acc-background);
   }
   
   .timeline::-moz-range-thumb {
@@ -77,7 +86,7 @@ body {
     cursor: pointer;
     opacity: 0;
     transition: all .1s;
-    background-color: #a94672;
+    background-color: var(--acc-background);
   }
   
   .timeline::-ms-thumb {
@@ -88,7 +97,7 @@ body {
     cursor: pointer;
     opacity: 0;
     transition: all .1s;
-    background-color: #a94672;
+    background-color: var(--acc-background);
   }
     
   .timeline::-webkit-slider-runnable-track {
@@ -115,4 +124,5 @@ body {
   iframe {
     width: 100vw;
     height: 100vh;
+    border: none; 
   }
